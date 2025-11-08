@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Transforma Verde 360 | Soluciones de Sostenibilidad y Rentabilidad
+    </title>
+    <meta
+      name="description"
+      content="Transforma Verde 360: Medición, optimización y certificación de la huella ambiental para alinear tu operación con la Ley 225-20 y los ODS."
+    />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Fuente Inter -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Config Tailwind -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary-green": "#10b981",
+              "secondary-blue": "#3b82f6",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="text-gray-800 font-sans">
+    <!-- HEADER -->
+    <header
+      class="sticky top-0 z-50 bg-white shadow-lg/50 backdrop-blur-md border-b border-gray-100 transition-all duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <!-- Logo / Marca -->
+          <a
+            href="#hero"
+            class="flex items-center space-x-2 text-xl font-extrabold text-primary-green transition duration-300 hover:text-green-700"
+          >
+            <i class="fa-solid fa-leaf"></i>
+            <span>Transforma Verde 360</span>
+          </a>
+
+          <!-- NAV DESKTOP -->
+          <nav class="hidden lg:flex space-x-8 items-center">
+            <a
+              href="#nosotros"
+              class="text-gray-600 hover:text-primary-green font-medium transition duration-300"
+              >Nosotros</a
+            >
+            <a
+              href="#servicios"
+              class="text-gray-600 hover:text-primary-green font-medium transition duration-300"
+              >Servicios 360</a
+            >
+            <a
+              href="#dashboard"
+              class="text-gray-600 hover:text-primary-green font-medium transition duration-300"
+              >Dashboard</a
+            >
+            <a
+              href="#impacto"
+              class="text-gray-600 hover:text-primary-green font-medium transition duration-300"
+              >Nuestro Impacto</a
+            >
+            <button
+              onclick="window.open(getLink('whatsapp'), '_blank')"
+              class="px-5 py-2 text-white bg-secondary-blue rounded-full font-semibold shadow-md hover:bg-blue-600 transition duration-300 transform hover:scale-105"
+            >
+              Contacta
+            </button>
+          </nav>
+
+          <!-- BOTÓN MENÚ MÓVIL -->
+          <button
+            id="menu-button"
+            class="lg:hidden bg-primary-green text-white p-3 rounded-full shadow-md hover:bg-green-600 transition duration-300"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- MENÚ MÓVIL CON FONDO VERDE -->
+      <div
+        id="mobile-menu"
+        class="hidden lg:hidden bg-primary-green text-white border-t border-primary-green/40"
+      >
+        <div class="px-4 pt-3 pb-4 space-y-1 flex flex-col items-start">
+          <a
+            href="#nosotros"
+            class="block w-full px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white/10"
+            >Nosotros</a
+          >
+          <a
+            href="#servicios"
+            class="block w-full px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white/10"
+            >Servicios 360</a
+          >
+          <a
+            href="#dashboard"
+            class="block w-full px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white/10"
+            >Dashboard</a
+          >
+          <a
+            href="#impacto"
+            class="block w-full px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white/10"
+            >Nuestro Impacto</a
+          >
+          <button
+            onclick="window.open(getLink('whatsapp'), '_blank')"
+            class="w-full mt-3 px-3 py-2 rounded-full text-primary-green bg-white font-semibold hover:bg-gray-100 transition duration-300"
+          >
+            Contacta
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO CON FOTO DE FONDO -->
+      <section
+        id="hero"
+        class="min-h-screen flex items-center justify-center text-center relative py-20 bg-cover bg-center bg-fixed"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2400');
+        "
+      >
+        <!-- Overlay oscuro -->
+        <div class="absolute inset-0 bg-black/50"></div>
+
+        <div class="relative z-10 max-w-4xl px-6">
+          <h1
+            class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6"
+          >
+            Transformamos el territorio con soluciones sostenibles y rentables.
+          </h1>
+
+          <p class="text-xl md:text-2xl text-gray-200 mb-10 font-light">
+            Medimos, optimizamos y certificamos tu huella ambiental, alineando
+            tu operación con la
+            <strong class="font-semibold">Ley 225-20</strong> y los
+            <strong class="font-semibold">ODS</strong>.
+          </p>
+
+          <div
+            class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6"
+          >
+            <a
+              href="#dashboard"
+              class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-lg font-semibold rounded-full shadow-lg text-gray-800 bg-white hover:bg-gray-100 transition duration-300 transform hover:scale-105"
+            >
+              <i class="fa-solid fa-compass mr-2"></i>
+              Explora nuestro Impacto
+            </a>
+            <button
+              onclick="window.open(getLink('audita'), '_blank')"
+              class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-lg font-semibold rounded-full shadow-lg text-white bg-primary-green hover:bg-green-600 transition duration-300 transform hover:scale-105"
+            >
+              <i class="fa-solid fa-circle-check mr-2"></i>
+              Audita tu empresa gratis
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- NOSOTROS -->
+      <section id="nosotros" class="py-20 lg:py-32 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <div class="lg:flex lg:space-x-12 items-start">
+            <div class="lg:w-1/2 mb-12 lg:mb-0">
+              <span
+                class="text-primary-green uppercase tracking-wider font-semibold"
+                >Quiénes Somos</span
+              >
+              <h2 class="text-4xl font-extrabold text-gray-900 mt-2 mb-6">
+                Transformamos la Sostenibilidad en Rentabilidad.
+              </h2>
+              <p class="text-lg text-gray-600 mb-6">
+                Somos una startup dominicana de innovación sostenible que
+                impulsa la transición ecológica de empresas, comunidades y
+                proyectos turísticos. Desde Punta Cana, lideramos con una visión
+                360° que combina estrategia, tecnología y ejecución técnica para
+                lograr impacto medible, eficiencia y ahorro real.
+              </p>
+              <p class="text-lg text-gray-600 mb-8">
+                A través del Club Verde 360 conectamos a empresas, técnicos y
+                aliados en sostenibilidad creando proyectos de alto impacto,
+                mientras nuestro
+                <strong class="font-semibold"
+                  >Dashboard Verde 360 Powered by Google Cloud</strong
+                >
+                permite visualizar los resultados y el valor generado en cada
+                proyecto. Nuestro propósito es simple: transformar
+                sostenibilidad en rentabilidad.
+              </p>
+
+              <div
+                class="p-6 bg-white border-l-4 border-secondary-blue rounded-xl shadow-lg transition duration-300 hover:shadow-xl"
+              >
+                <div class="flex items-start">
+                  <i
+                    class="fa-solid fa-earth-americas text-secondary-blue flex-shrink-0 mt-1"
+                    style="font-size: 2rem"
+                  ></i>
+                  <div class="ml-4">
+                    <h3 class="text-xl font-bold text-gray-900">
+                      Ley 225-20 y ODS: El Camino Verde
+                    </h3>
+                    <p class="text-gray-600 mt-1">
+                      La
+                      <strong class="font-semibold">Ley 225-20</strong> nos
+                      invita a cuidar mejor nuestros recursos y dar nueva vida a
+                      los residuos. Junto a los
+                      <strong class="font-semibold"
+                        >Objetivos de Desarrollo Sostenible (ODS)</strong
+                      >, marcan el camino hacia una República Dominicana más
+                      limpia, eficiente y verde. En Transforma Verde 360 hacemos
+                      que esas metas se conviertan en acciones reales.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:w-1/2 relative">
+              <div
+                class="aspect-video bg-gray-300 rounded-xl shadow-2xl overflow-hidden transition duration-300 hover:shadow-3xl"
+              >
+                <iframe
+                  class="w-full h-full"
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ?controls=0"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DASHBOARD -->
+      <section id="dashboard" class="py-20 lg:py-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+          <span
+            class="text-secondary-blue uppercase tracking-wider font-semibold"
+            >Tecnología</span
+          >
+          <h2 class="text-4xl font-extrabold text-gray-900 mt-2 mb-10">
+            Dashboard Verde 360 –
+            <span class="text-blue-600">Powered by Google Cloud.</span>
+          </h2>
+
+          <div
+            class="relative w-full max-w-4xl mx-auto mb-10 overflow-hidden rounded-xl shadow-2xl group"
+          >
+            <img
+              src="assets/img/dashboard-verde-360.jpeg"
+              alt="Dashboard Verde 360 Interfaz"
+              class="w-full rounded-xl transition-transform duration-500 ease-in-out img-zoom"
+              onerror="this.onerror=null; this.src='https://via.placeholder.com/1200x600?text=Dashboard+Transforma+Verde+360+Placeholder';"
+            />
+          </div>
+
+          <div class="max-w-3xl mx-auto">
+            <p class="text-xl text-gray-600 mb-8">
+              Monitorea y gestiona en tiempo real tus indicadores de energía,
+              agua, residuos y movilidad sostenible. Audita tu desempeño
+              ambiental, genera informes para cumplimiento, stakeholders y
+              muestra tu impacto sostenible de forma visual y dinámica.
+            </p>
+            <p class="text-xl text-gray-600 mb-10 font-bold">
+              Con el nuevo asistente de sostenibilidad
+              <span class="text-primary-green">Verde 360.ai</span>, impulsado
+              por Google GenAI, obtén informes y recomendaciones automáticas,
+              detección de anomalías en consumo o gestión, y sugerencias
+              inteligentes de acción para una toma de decisiones más ágil y
+              efectiva.
+            </p>
+
+            <div
+              class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6"
+            >
+              <button
+                onclick="window.open(getLink('demo'), '_blank')"
+                class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-lg font-semibold rounded-full shadow-lg text-white bg-secondary-blue hover:bg-blue-600 transition duration-300 transform hover:scale-105"
+              >
+                <i class="fa-solid fa-circle-play mr-2"></i>
+                Solicitar Demo
+              </button>
+              <button
+                onclick="window.open(getLink('ficha'), '_blank')"
+                class="inline-flex items-center justify-center px-8 py-3 border border-secondary-blue text-lg font-semibold rounded-full shadow-lg text-secondary-blue bg-white hover:bg-blue-50 transition duration-300 transform hover:scale-105"
+              >
+                <i class="fa-solid fa-file-lines mr-2"></i>
+                Ficha técnica Dashboard Verde 360
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICIOS 360 -->
+      <section id="servicios" class="py-20 lg:py-32 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+          <span
+            class="text-primary-green uppercase tracking-wider font-semibold"
+            >Portafolio Integral</span
+          >
+          <h2 class="text-4xl font-extrabold text-gray-900 mt-2 mb-12">
+            Nuestros Servicios 360º para la Sostenibilidad Empresarial.
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Club Verde 360 -->
+            <div
+              class="p-8 bg-white rounded-xl shadow-lg border border-gray-100 transition duration-300 hover:shadow-xl hover:border-primary-green flex flex-col justify-between"
+            >
+              <div>
+                <i class="fa-solid fa-users text-primary-green mb-4"></i>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">
+                  Club Verde 360
+                </h3>
+                <p class="text-gray-600 mb-6">
+                  Dashboard de sostenibilidad + talleres, formación para equipo
+                  directivo y técnico, acceso a financiamiento Verde, y
+                  networking de alto impacto.
+                </p>
+              </div>
+              <button
+                onclick="window.open(getLink('unete_club'), '_blank')"
+                class="mt-auto px-5 py-2 text-white bg-primary-green rounded-full font-semibold shadow-md hover:bg-green-600 transition duration-300 transform hover:scale-105 w-full"
+              >
+                <i class="fa-solid fa-handshake mr-2"></i> Únete al Club
+              </button>
+            </div>
+
+            <!-- Auditorías Verdes -->
+            <div
+              class="p-8 bg-white rounded-xl shadow-lg border border-gray-100 transition duration-300 hover:shadow-xl hover:border-secondary-blue flex flex-col justify-between"
+            >
+              <div>
+                <i
+                  class="fa-solid fa-clipboard-check text-secondary-blue mb-4"
+                ></i>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">
+                  Auditorías Verdes
+                </h3>
+                <p class="text-gray-600 mb-6">
+                  Evaluaciones completas para medir el impacto, identificar
+                  riesgos y certificar el cumplimiento normativo (Ley 225-20).
+                </p>
+              </div>
+              <button
+                onclick="window.open(getLink('whatsapp'), '_blank')"
+                class="mt-auto px-5 py-2 text-white bg-secondary-blue rounded-full font-semibold shadow-md hover:bg-blue-600 transition duration-300 transform hover:scale-105 w-full"
+              >
+                <i class="fa-solid fa-arrow-right mr-2"></i> Solicita Evaluación
+              </button>
+            </div>
+
+            <!-- Gestión de Residuos -->
+            <div
+              class="p-8 bg-white rounded-xl shadow-lg border border-gray-100 transition duration-300 hover:shadow-xl hover:border-yellow-500 flex flex-col justify-between"
+            >
+              <div>
+                <i class="fa-solid fa-recycle text-yellow-500 mb-4"></i>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">
+                  Gestión de Residuos (Punto Verde 360)
+                </h3>
+                <p class="text-gray-600 mb-6">
+                  Nuestra solución Punto Verde 360: Separación, reciclaje,
+                  valorización y métricas de desvío para una economía circular
+                  efectiva.
+                </p>
+              </div>
+              <button
+                onclick="window.open(getLink('whatsapp'), '_blank')"
+                class="mt-auto px-5 py-2 text-white bg-secondary-blue rounded-full font-semibold shadow-md hover:bg-blue-600 transition duration-300 transform hover:scale-105 w-full"
+              >
+                <i class="fa-solid fa-arrow-right mr-2"></i> Solicita Evaluación
+              </button>
+            </div>
+
+            <!-- Eficiencia Energética -->
+            <div
+              class="p-8 bg-white rounded-xl shadow-lg border border-gray-100 transition duration-300 hover:shadow-xl hover:border-red-500 flex flex-col justify-between"
+            >
+              <div>
+                <i class="fa-solid fa-bolt text-red-500 mb-4"></i>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">
+                  Eficiencia Energética e Hídrica
+                </h3>
+                <p class="text-gray-600 mb-6">
+                  Optimización de consumo, implementación de renovables y
+                  reducción de la huella hídrica y energética para un ahorro
+                  real.
+                </p>
+              </div>
+              <button
+                onclick="window.open(getLink('whatsapp'), '_blank')"
+                class="mt-auto px-5 py-2 text-white bg-secondary-blue rounded-full font-semibold shadow-md hover:bg-blue-600 transition duration-300 transform hover:scale-105 w-full"
+              >
+                <i class="fa-solid fa-arrow-right mr-2"></i> Solicita Evaluación
+              </button>
+            </div>
+
+            <!-- Movilidad Sostenible -->
+            <div
+              class="p-8 bg-white rounded-xl shadow-lg border border-gray-100 transition duration-300 hover:shadow-xl hover:border-indigo-500 flex flex-col justify-between"
+            >
+              <div>
+                <i class="fa-solid fa-car text-indigo-500 mb-4"></i>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">
+                  Movilidad Sostenible
+                </h3>
+                <p class="text-gray-600 mb-6">
+                  Impulsamos soluciones de transporte limpio y eficiente que
+                  reducen emisiones y mejoran la calidad de vida de tu equipo o
+                  comunidad.
+                </p>
+              </div>
+              <button
+                onclick="window.open(getLink('whatsapp'), '_blank')"
+                class="mt-auto px-5 py-2 text-white bg-secondary-blue rounded-full font-semibold shadow-md hover:bg-blue-600 transition duration-300 transform hover:scale-105 w-full"
+              >
+                <i class="fa-solid fa-arrow-right mr-2"></i> Solicita Evaluación
+              </button>
+            </div>
+
+            <!-- Limpieza Sostenible -->
+            <div
+              class="p-8 bg-white rounded-xl shadow-lg border border-gray-100 transition duration-300 hover:shadow-xl hover:border-teal-500 flex flex-col justify-between"
+            >
+              <div>
+                <i class="fa-solid fa-soap text-teal-500 mb-4"></i>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">
+                  Limpieza Sostenible
+                </h3>
+                <p class="text-gray-600 mb-6">
+                  Promovemos prácticas de limpieza responsables que protegen la
+                  salud y el entorno. Utilizamos productos y protocolos verdes.
+                </p>
+              </div>
+              <button
+                onclick="window.open(getLink('whatsapp'), '_blank')"
+                class="mt-auto px-5 py-2 text-white bg-secondary-blue rounded-full font-semibold shadow-md hover:bg-blue-600 transition duration-300 transform hover:scale-105 w-full"
+              >
+                <i class="fa-solid fa-arrow-right mr-2"></i> Solicita Evaluación
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- IMPACTO -->
+      <section id="impacto" class="py-20 lg:py-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+          <span
+            class="text-primary-green uppercase tracking-wider font-semibold"
+            >Resultados Verificables</span
+          >
+          <h2 class="text-4xl font-extrabold text-gray-900 mt-2 mb-12">
+            Nuestro Impacto
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div
+              class="flex flex-col rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-2xl"
+            >
+              <img
+                src="assets/img/impacto-flor.jpeg"
+                alt="Flor de Hibiscus"
+                class="w-full h-48 object-cover"
+                onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400?text=CO2+Reducido';"
+              />
+              <div class="p-6 bg-white flex-grow">
+                <p class="text-5xl font-extrabold text-primary-green mb-2">
+                  2,500+
+                </p>
+                <h3 class="text-xl font-bold text-gray-900">
+                  Ton. de CO2 Reducidas
+                </h3>
+                <p class="text-gray-600 mt-2 text-sm">
+                  Ahorro en emisiones gracias a la optimización energética.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-2xl"
+            >
+              <img
+                src="assets/img/impacto-costa.jpeg"
+                alt="Vista Aérea de Costa Limpia"
+                class="w-full h-48 object-cover"
+                onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400?text=Residuos+Gestionados';"
+              />
+              <div class="p-6 bg-white flex-grow">
+                <p class="text-5xl font-extrabold text-secondary-blue mb-2">
+                  900+
+                </p>
+                <h3 class="text-xl font-bold text-gray-900">
+                  M3 de Residuos Gestionados
+                </h3>
+                <p class="text-gray-600 mt-2 text-sm">
+                  Residuos desviados de vertederos hacia la cadena de reciclaje.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-2xl"
+            >
+              <img
+                src="assets/img/impacto-bosque-co2.jpeg"
+                alt="Gráfico de Reducción de CO2"
+                class="w-full h-48 object-cover"
+                onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400?text=Ahorro+en+Costos';"
+              />
+              <div class="p-6 bg-white flex-grow">
+                <p class="text-5xl font-extrabold text-primary-green mb-2">
+                  20%
+                </p>
+                <h3 class="text-xl font-bold text-gray-900">
+                  Ahorro Promedio en Costos
+                </h3>
+                <p class="text-gray-600 mt-2 text-sm">
+                  Reducción en facturas de energía y agua tras implementación.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-2xl"
+            >
+              <img
+                src="assets/img/impacto-bosque-co1.jpeg"
+                alt="Concepto de captura de CO2"
+                class="w-full h-48 object-cover"
+                onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400?text=Empresas+Certificadas';"
+              />
+              <div class="p-6 bg-white flex-grow">
+                <p class="text-5xl font-extrabold text-secondary-blue mb-2">
+                  50+
+                </p>
+                <h3 class="text-xl font-bold text-gray-900">
+                  Empresas Certificadas
+                </h3>
+                <p class="text-gray-600 mt-2 text-sm">
+                  Negocios con certificación de cumplimiento y sostenibilidad.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-12">
+            <button
+              onclick="window.open(getLink('whatsapp'), '_blank')"
+              class="inline-flex items-center justify-center px-10 py-4 text-xl font-bold rounded-full shadow-xl text-white bg-primary-green hover:bg-green-700 transition duration-300 transform hover:scale-105"
+            >
+              <i class="fa-solid fa-bolt mr-2"></i>
+              Súmate al impacto
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TALENTO -->
+      <section id="talento" class="py-20 lg:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <div
+            class="p-10 md:p-16 bg-green-50 rounded-xl shadow-2xl border-t-8 border-primary-green transition duration-300 hover:shadow-3xl text-center"
+          >
+            <span
+              class="text-primary-green uppercase tracking-wider font-semibold text-lg"
+              >Únete al Movimiento</span
+            >
+            <h2 class="text-4xl font-extrabold text-gray-900 mt-2 mb-6">
+              Talento &amp; Empleo Sostenible: Colabora con nuestro equipo.
+            </h2>
+            <p class="text-xl text-gray-700 max-w-4xl mx-auto mb-8">
+              En Transforma Verde 360 creemos que el verdadero cambio nace del
+              talento y las ideas. Buscamos personas y mentes innovadoras que
+              quieran transformar la sostenibilidad en acción real:
+              profesionales, emprendedores y creativos que vean oportunidades
+              donde otros ven desafíos. Si te apasiona la transición ecológica,
+              la eficiencia energética o la gestión sostenible, queremos
+              conocerte. También abrimos este espacio para quienes tengan
+              proyectos o ideas verdes que puedan crecer con nuestro apoyo
+              técnico, estratégico o comercial.
+            </p>
+            <p
+              class="text-lg font-bold text-primary-green max-w-4xl mx-auto mb-8"
+            >
+              💡 Conecta tu talento o tu idea con un propósito mayor: construir
+              juntos un futuro más verde y rentable.
+            </p>
+            <button
+              onclick="window.open(getLink('talento'), '_blank')"
+              class="inline-flex items-center justify-center px-10 py-4 text-xl font-bold rounded-full shadow-lg text-white bg-secondary-blue hover:bg-blue-600 transition duration-300 transform hover:scale-105"
+            >
+              <i class="fa-solid fa-lightbulb mr-2"></i>
+              Postúlate o Envía tu Idea
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTO FULL-WIDTH -->
+      <section id="contacto" class="py-20 bg-primary-green">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center text-white">
+          <h2 class="text-4xl font-extrabold mb-4">
+            Contacta con nuestro equipo
+          </h2>
+          <p class="text-xl mb-10 opacity-90">
+            Hablemos sobre cómo la sostenibilidad puede impulsar tu
+            rentabilidad.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6"
+          >
+            <button
+              onclick="window.open(getLink('whatsapp'), '_blank')"
+              class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-full shadow-lg text-primary-green bg-white hover:bg-gray-100 transition duration-300 transform hover:scale-105"
+            >
+              <i class="fa-brands fa-whatsapp mr-2"></i>
+              Chatea por WhatsApp
+            </button>
+            <button
+              onclick="window.open(getLink('email'), '_blank')"
+              class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-full shadow-lg text-white border-2 border-white hover:bg-white hover:text-primary-green transition duration-300 transform hover:scale-105"
+            >
+              <i class="fa-solid fa-envelope mr-2"></i>
+              Enviar un Email
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-10">
+          <div>
+            <a
+              href="#hero"
+              class="flex items-center space-x-2 text-xl font-extrabold text-primary-green mb-4"
+            >
+              <i class="fa-solid fa-leaf"></i>
+              <span>Trans. Verde 360</span>
+            </a>
+            <p class="text-sm text-gray-400">
+              Hacemos que la sostenibilidad sea medible, alcanzable y, sobre
+              todo, rentable para tu negocio.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4 text-primary-green">
+              Enlaces Rápidos
+            </h4>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li>
+                <a
+                  href="#nosotros"
+                  class="hover:text-white transition duration-200"
+                  >Nosotros</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#servicios"
+                  class="hover:text-white transition duration-200"
+                  >Servicios 360</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#dashboard"
+                  class="hover:text-white transition duration-200"
+                  >Dashboard</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#impacto"
+                  class="hover:text-white transition duration-200"
+                  >Nuestro Impacto</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#talento"
+                  class="hover:text-white transition duración-200"
+                  >Talento &amp; Empleo</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4 text-primary-green">
+              Contacto
+            </h4>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li class="flex items-center space-x-2">
+                <i class="fa-solid fa-envelope" style="font-size: 1rem"></i>
+                <a
+                  href="mailto:info@transformaverde360.com"
+                  class="hover:text-white transition duration-200"
+                  >info@transformaverde360.com</a
+                >
+              </li>
+              <li class="flex items-center space-x-2">
+                <i class="fa-brands fa-whatsapp" style="font-size: 1rem"></i>
+                <a
+                  href="#"
+                  onclick="window.open(getLink('whatsapp'), '_blank'); return false;"
+                  class="hover:text-white transition duration-200"
+                  >+1 (829) 430-0225 (WhatsApp)</a
+                >
+              </li>
+              <li class="flex items-center space-x-2">
+                <i class="fa-solid fa-location-dot" style="font-size: 1rem"></i>
+                <span>Punta Cana, Rep. Dominicana</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4 text-primary-green">
+              Síguenos
+            </h4>
+            <div class="flex space-x-4">
+              <a
+                href="https://www.linkedin.com/in/alexis-aquino-b71005162?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                target="_blank"
+                class="text-gray-400 hover:text-white transition duration-200"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                class="text-gray-400 hover:text-white transition duration-200"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                class="text-gray-400 hover:text-white transition duración-200"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://youtube.com"
+                target="_blank"
+                class="text-gray-400 hover:text-white transition duración-200"
+              >
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="mt-10 pt-6 border-t border-gray-800 text-center text-sm text-gray-500"
+        >
+          &copy; 2025 Transforma Verde 360. Todos los derechos reservados.
+        </div>
+      </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE WHATSAPP -->
+    <a
+      href="#"
+      onclick="window.open(getLink('whatsapp'), '_blank'); return false;"
+      class="whatsapp-float group"
+    >
+      <i class="fa-brands fa-whatsapp mt-4"></i>
+      <div
+        id="chat-bubble"
+        class="chat-bubble flex flex-col items-start hidden group-hover:block"
+      >
+        <p class="text-sm font-semibold text-gray-800 mb-1">Verde 360.ai</p>
+        <p class="text-xs text-gray-600">
+          ¿Cómo podemos transformar tu operación hoy?
+        </p>
+        <span class="text-xs mt-2 text-secondary-blue font-medium"
+          >¡Clic para chatear!</span
+        >
+      </div>
+    </a>
+
+    <!-- JS propio -->
+    <script src="/assets/js/main.js" defer></script>
+  </body>
+</html>

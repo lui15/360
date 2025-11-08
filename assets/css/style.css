@@ -1,0 +1,169 @@
+/*
+ * --------------------------------
+ * ESTILOS BASE Y FUENTES (SI APLICA)
+ * --------------------------------
+ */
+
+/* Habilitar scroll suave */
+html.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+/*
+ * --------------------------------
+ * CORRECCIÓN DE ANCLAJES DE SCROLL PARA NAVBAR FIJO
+ * (Soluciona el problema de que el scroll no "baja" al punto correcto)
+ * --------------------------------
+ */
+#nosotros,
+#servicios,
+#dashboard,
+#impacto,
+#talento,
+#contacto {
+  /* Compensación para el navbar fijo (20h = 5rem, 6rem para seguridad) */
+  scroll-margin-top: 6rem;
+}
+
+/*
+ * --------------------------------
+ * ESTILOS ESPECÍFICOS PARA ICONOS DE FONT AWESOME (SOLUCIÓN FORZADA FINAL)
+ * (Soluciona el problema de que los iconos no se visualizan)
+ * --------------------------------
+ */
+
+/* Aplicamos esta regla a todas las etiquetas <i> que tengan una clase fa- */
+i[class*="fa-"] {
+  /* Forzar que sea un bloque inline para respetar las dimensiones */
+  display: inline-block;
+
+  /* FUERZA LAS FAMILIAS DE FUENTE Y EL PESO CORRECTO */
+  font-family: "Font Awesome 6 Pro", "Font Awesome 6 Free",
+    "Font Awesome 6 Brands", sans-serif !important;
+  font-weight: 900 !important; /* Peso sólido por defecto */
+  font-style: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Iconos de Marca (fa-brands) tienen un peso de fuente diferente */
+.fa-brands {
+  font-weight: 400 !important;
+}
+
+/* TAMAÑOS Y ESPACIADO GENERAL (Asegura el tamaño) */
+
+/* Iconos en botones y enlaces pequeños/general */
+.fa-solid,
+.fa-brands {
+  font-size: 1.125rem; /* ~18px */
+  width: 1.125rem;
+  height: 1.125rem;
+  line-height: 1.125rem;
+  text-align: center;
+}
+
+/* Iconos en el Navbar y Menú Móvil (un poco más grandes) */
+header .fa-solid,
+header .fa-brands {
+  font-size: 1.5rem; /* ~24px */
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+}
+
+/* Iconos grandes en la Sección Servicios (cajas) */
+#servicios .fa-solid,
+#servicios .fa-brands {
+  font-size: 2.5rem !important; /* ~40px */
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+}
+
+/* Iconos en el Footer */
+footer .fa-solid,
+footer .fa-brands {
+  font-size: 1.25rem; /* ~20px */
+  width: 1.25rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
+}
+
+/*
+ * --------------------------------
+ * HERO SECTION (PARALLAX)
+ * El estilo de fondo ahora está definido INLINE en el archivo index.html
+ * --------------------------------
+ */
+
+/*
+ * --------------------------------
+ * DASHBOARD IMAGE (ZOOM)
+ * --------------------------------
+ */
+
+.img-zoom {
+  transition: transform 0.5s ease-in-out;
+}
+.img-zoom:hover {
+  transform: scale(1.05);
+}
+
+/*
+ * --------------------------------
+ * BOTÓN FLOTANTE (WHATSAPP)
+ * --------------------------------
+ */
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366; /* Color de WhatsApp */
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-float:hover {
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+  transform: scale(1.1);
+}
+
+.chat-bubble {
+  position: absolute;
+  right: 70px;
+  bottom: 0px;
+  background-color: white;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 250px;
+  z-index: 90;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.whatsapp-float:hover .chat-bubble {
+  opacity: 1;
+  display: flex !important;
+  flex-direction: column;
+}
+
+/* Estilo específico para el ícono de WhatsApp flotante */
+.whatsapp-float i {
+  font-size: 30px !important;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
