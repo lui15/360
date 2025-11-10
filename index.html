@@ -11,25 +11,21 @@
       content="Transforma Verde 360: Medición, optimización y certificación de la huella ambiental para alinear tu operación con la Ley 225-20 y los ODS."
     />
 
-    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Font Awesome -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMD/CDt+VjXWlY0p/4J2a7XyK5Lz4Ew970u2y5r3kY1gO7eT9j99a6s4+Q7b1/5e8y509/u+tM/"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
 
-    <!-- Fuente Inter -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Config Tailwind -->
     <script>
       tailwind.config = {
         theme: {
@@ -46,18 +42,15 @@
       };
     </script>
 
-    <!-- CSS propio -->
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body class="text-gray-800 font-sans">
-    <!-- HEADER -->
     <header
       class="sticky top-0 z-50 bg-white shadow-lg/50 backdrop-blur-md border-b border-gray-100 transition-all duration-300"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-20">
-          <!-- Logo / Marca -->
           <a
             href="#hero"
             class="flex items-center space-x-2 text-xl font-extrabold text-primary-green transition duration-300 hover:text-green-700"
@@ -66,7 +59,6 @@
             <span>Transforma Verde 360</span>
           </a>
 
-          <!-- NAV DESKTOP -->
           <nav class="hidden lg:flex space-x-8 items-center">
             <a
               href="#nosotros"
@@ -96,7 +88,6 @@
             </button>
           </nav>
 
-          <!-- BOTÓN MENÚ MÓVIL -->
           <button
             id="menu-button"
             class="lg:hidden bg-primary-green text-white p-3 rounded-full shadow-md hover:bg-green-600 transition duration-300"
@@ -106,7 +97,6 @@
         </div>
       </div>
 
-      <!-- MENÚ MÓVIL CON FONDO VERDE -->
       <div
         id="mobile-menu"
         class="hidden lg:hidden bg-primary-green text-white border-t border-primary-green/40"
@@ -143,15 +133,11 @@
     </header>
 
     <main>
-      <!-- HERO CON FOTO DE FONDO -->
       <section
         id="hero"
         class="min-h-screen flex items-center justify-center text-center relative py-20 bg-cover bg-center bg-fixed"
-        style="
-          background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2400');
-        "
+        style="background-image: url('/assets/img/hero-bg-playa.jpg')"
       >
-        <!-- Overlay oscuro -->
         <div class="absolute inset-0 bg-black/50"></div>
 
         <div class="relative z-10 max-w-4xl px-6">
@@ -189,7 +175,6 @@
         </div>
       </section>
 
-      <!-- NOSOTROS -->
       <section id="nosotros" class="py-20 lg:py-32 bg-gray-50">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
           <div class="lg:flex lg:space-x-12 items-start">
@@ -266,7 +251,6 @@
         </div>
       </section>
 
-      <!-- DASHBOARD -->
       <section id="dashboard" class="py-20 lg:py-32">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <span
@@ -274,8 +258,12 @@
             >Tecnología</span
           >
           <h2 class="text-4xl font-extrabold text-gray-900 mt-2 mb-10">
-            Dashboard Verde 360 –
-            <span class="text-blue-600">Powered by Google Cloud.</span>
+            Dashboard
+            <span class="text-primary-green">Verde 360</span> – Powered by
+            <span class="text-secondary-blue"
+              >Google Cloud
+              <i class="fa-brands fa-google text-blue-600"></i>
+            </span>
           </h2>
 
           <div
@@ -327,7 +315,6 @@
         </div>
       </section>
 
-      <!-- SERVICIOS 360 -->
       <section id="servicios" class="py-20 lg:py-32 bg-gray-50">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <span
@@ -339,7 +326,6 @@
           </h2>
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Club Verde 360 -->
             <div
               class="p-8 bg-white rounded-xl shadow-lg border border-gray-100 transition duration-300 hover:shadow-xl hover:border-primary-green flex flex-col justify-between"
             >
@@ -362,7 +348,6 @@
               </button>
             </div>
 
-            <!-- Auditorías Verdes -->
             <div
               class="p-8 bg-white rounded-xl shadow-lg border border-gray-100 transition duration-300 hover:shadow-xl hover:border-secondary-blue flex flex-col justify-between"
             >
@@ -386,7 +371,6 @@
               </button>
             </div>
 
-            <!-- Gestión de Residuos -->
             <div
               class="p-8 bg-white rounded-xl shadow-lg border border-gray-100 transition duration-300 hover:shadow-xl hover:border-yellow-500 flex flex-col justify-between"
             >
@@ -409,7 +393,6 @@
               </button>
             </div>
 
-            <!-- Eficiencia Energética -->
             <div
               class="p-8 bg-white rounded-xl shadow-lg border border-gray-100 transition duration-300 hover:shadow-xl hover:border-red-500 flex flex-col justify-between"
             >
@@ -432,7 +415,6 @@
               </button>
             </div>
 
-            <!-- Movilidad Sostenible -->
             <div
               class="p-8 bg-white rounded-xl shadow-lg border border-gray-100 transition duration-300 hover:shadow-xl hover:border-indigo-500 flex flex-col justify-between"
             >
@@ -455,7 +437,6 @@
               </button>
             </div>
 
-            <!-- Limpieza Sostenible -->
             <div
               class="p-8 bg-white rounded-xl shadow-lg border border-gray-100 transition duration-300 hover:shadow-xl hover:border-teal-500 flex flex-col justify-between"
             >
@@ -480,7 +461,6 @@
         </div>
       </section>
 
-      <!-- IMPACTO -->
       <section id="impacto" class="py-20 lg:py-32">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <span
@@ -496,20 +476,18 @@
               class="flex flex-col rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-2xl"
             >
               <img
-                src="assets/img/impacto-flor.jpeg"
-                alt="Flor de Hibiscus"
+                src="assets/img/futuro.jpeg"
+                alt="Visión de Futuro Sostenible"
                 class="w-full h-48 object-cover"
-                onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400?text=CO2+Reducido';"
+                onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400?text=Futuro+Sostenible';"
               />
               <div class="p-6 bg-white flex-grow">
                 <p class="text-5xl font-extrabold text-primary-green mb-2">
-                  2,500+
+                  <i class="fa-solid fa-chart-line"></i>
                 </p>
-                <h3 class="text-xl font-bold text-gray-900">
-                  Ton. de CO2 Reducidas
-                </h3>
+                <h3 class="text-xl font-bold text-gray-900">Compromiso</h3>
                 <p class="text-gray-600 mt-2 text-sm">
-                  Ahorro en emisiones gracias a la optimización energética.
+                  Iniciativas y proyectos en desarrollo.
                 </p>
               </div>
             </div>
@@ -521,17 +499,17 @@
                 src="assets/img/impacto-costa.jpeg"
                 alt="Vista Aérea de Costa Limpia"
                 class="w-full h-48 object-cover"
-                onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400?text=Residuos+Gestionados';"
+                onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400?text=Alianzas+Reciclaje';"
               />
               <div class="p-6 bg-white flex-grow">
                 <p class="text-5xl font-extrabold text-secondary-blue mb-2">
-                  900+
+                  <i class="fa-solid fa-recycle"></i>
                 </p>
                 <h3 class="text-xl font-bold text-gray-900">
-                  M3 de Residuos Gestionados
+                  Alianzas con Recicladores
                 </h3>
                 <p class="text-gray-600 mt-2 text-sm">
-                  Residuos desviados de vertederos hacia la cadena de reciclaje.
+                  Red de gestores para la valorización de residuos.
                 </p>
               </div>
             </div>
@@ -543,17 +521,17 @@
                 src="assets/img/impacto-bosque-co2.jpeg"
                 alt="Gráfico de Reducción de CO2"
                 class="w-full h-48 object-cover"
-                onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400?text=Ahorro+en+Costos';"
+                onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400?text=Ahorro+Proyectado';"
               />
               <div class="p-6 bg-white flex-grow">
                 <p class="text-5xl font-extrabold text-primary-green mb-2">
-                  20%
+                  <i class="fa-solid fa-money-bill-trend-up"></i>
                 </p>
                 <h3 class="text-xl font-bold text-gray-900">
-                  Ahorro Promedio en Costos
+                  Ahorro Proyectado
                 </h3>
                 <p class="text-gray-600 mt-2 text-sm">
-                  Reducción en facturas de energía y agua tras implementación.
+                  Potencial de eficiencia energética en clientes.
                 </p>
               </div>
             </div>
@@ -565,17 +543,17 @@
                 src="assets/img/impacto-bosque-co1.jpeg"
                 alt="Concepto de captura de CO2"
                 class="w-full h-48 object-cover"
-                onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400?text=Empresas+Certificadas';"
+                onerror="this.onerror=null; this.src='https://via.placeholder.com/600x400?text=Proyectos+Activos';"
               />
               <div class="p-6 bg-white flex-grow">
                 <p class="text-5xl font-extrabold text-secondary-blue mb-2">
-                  50+
+                  <i class="fa-solid fa-earth-americas"></i>
                 </p>
                 <h3 class="text-xl font-bold text-gray-900">
-                  Empresas Certificadas
+                  Proyectos Activos
                 </h3>
                 <p class="text-gray-600 mt-2 text-sm">
-                  Negocios con certificación de cumplimiento y sostenibilidad.
+                  Clientes que transforman su operación con nosotros.
                 </p>
               </div>
             </div>
@@ -583,7 +561,7 @@
 
           <div class="mt-12">
             <button
-              onclick="window.open(getLink('whatsapp'), '_blank')"
+              onclick="window.open(getLink('impacto_form'), '_blank')"
               class="inline-flex items-center justify-center px-10 py-4 text-xl font-bold rounded-full shadow-xl text-white bg-primary-green hover:bg-green-700 transition duration-300 transform hover:scale-105"
             >
               <i class="fa-solid fa-bolt mr-2"></i>
@@ -593,7 +571,6 @@
         </div>
       </section>
 
-      <!-- TALENTO -->
       <section id="talento" class="py-20 lg:py-32 bg-white">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
           <div
@@ -634,7 +611,6 @@
         </div>
       </section>
 
-      <!-- CONTACTO FULL-WIDTH -->
       <section id="contacto" class="py-20 bg-primary-green">
         <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center text-white">
           <h2 class="text-4xl font-extrabold mb-4">
@@ -666,7 +642,6 @@
       </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="bg-gray-900 text-white py-12">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-10">
@@ -801,7 +776,6 @@
       </div>
     </footer>
 
-    <!-- BOTÓN FLOTANTE WHATSAPP -->
     <a
       href="#"
       onclick="window.open(getLink('whatsapp'), '_blank'); return false;"
@@ -822,7 +796,6 @@
       </div>
     </a>
 
-    <!-- JS propio -->
     <script src="/assets/js/main.js" defer></script>
   </body>
 </html>

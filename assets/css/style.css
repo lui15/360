@@ -1,108 +1,72 @@
-/*
- * --------------------------------
- * ESTILOS BASE Y FUENTES (SI APLICA)
- * --------------------------------
- */
-
-/* Habilitar scroll suave */
+/* Scroll suave */
 html.scroll-smooth {
   scroll-behavior: smooth;
 }
 
-/*
- * --------------------------------
- * CORRECCIÓN DE ANCLAJES DE SCROLL PARA NAVBAR FIJO
- * (Soluciona el problema de que el scroll no "baja" al punto correcto)
- * --------------------------------
- */
+/* Compensación de secciones por navbar fijo */
 #nosotros,
 #servicios,
 #dashboard,
 #impacto,
 #talento,
 #contacto {
-  /* Compensación para el navbar fijo (20h = 5rem, 6rem para seguridad) */
   scroll-margin-top: 6rem;
 }
 
-/*
- * --------------------------------
- * ESTILOS ESPECÍFICOS PARA ICONOS DE FONT AWESOME (SOLUCIÓN FORZADA FINAL)
- * (Soluciona el problema de que los iconos no se visualizan)
- * --------------------------------
- */
-
-/* Aplicamos esta regla a todas las etiquetas <i> que tengan una clase fa- */
+/* Forzar iconos Font Awesome a mostrarse bien */
 i[class*="fa-"] {
-  /* Forzar que sea un bloque inline para respetar las dimensiones */
   display: inline-block;
-
-  /* FUERZA LAS FAMILIAS DE FUENTE Y EL PESO CORRECTO */
   font-family: "Font Awesome 6 Pro", "Font Awesome 6 Free",
     "Font Awesome 6 Brands", sans-serif !important;
-  font-weight: 900 !important; /* Peso sólido por defecto */
+  font-weight: 900 !important;
   font-style: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Iconos de Marca (fa-brands) tienen un peso de fuente diferente */
+/* Peso correcto para marcas */
 .fa-brands {
   font-weight: 400 !important;
 }
 
-/* TAMAÑOS Y ESPACIADO GENERAL (Asegura el tamaño) */
-
-/* Iconos en botones y enlaces pequeños/general */
+/* Tamaños generales de iconos */
 .fa-solid,
 .fa-brands {
-  font-size: 1.125rem; /* ~18px */
+  font-size: 1.125rem;
   width: 1.125rem;
   height: 1.125rem;
   line-height: 1.125rem;
   text-align: center;
 }
 
-/* Iconos en el Navbar y Menú Móvil (un poco más grandes) */
+/* Iconos header y menú móvil */
 header .fa-solid,
 header .fa-brands {
-  font-size: 1.5rem; /* ~24px */
+  font-size: 1.5rem;
   width: 1.5rem;
   height: 1.5rem;
   line-height: 1.5rem;
 }
 
-/* Iconos grandes en la Sección Servicios (cajas) */
+/* Iconos grandes en servicios */
 #servicios .fa-solid,
 #servicios .fa-brands {
-  font-size: 2.5rem !important; /* ~40px */
+  font-size: 2.5rem !important;
   width: 2.5rem;
   height: 2.5rem;
   line-height: 2.5rem;
 }
 
-/* Iconos en el Footer */
+/* Iconos footer */
 footer .fa-solid,
 footer .fa-brands {
-  font-size: 1.25rem; /* ~20px */
+  font-size: 1.25rem;
   width: 1.25rem;
   height: 1.25rem;
   line-height: 1.25rem;
 }
 
-/*
- * --------------------------------
- * HERO SECTION (PARALLAX)
- * El estilo de fondo ahora está definido INLINE en el archivo index.html
- * --------------------------------
- */
-
-/*
- * --------------------------------
- * DASHBOARD IMAGE (ZOOM)
- * --------------------------------
- */
-
+/* Efecto zoom en imagen de dashboard */
 .img-zoom {
   transition: transform 0.5s ease-in-out;
 }
@@ -110,19 +74,14 @@ footer .fa-brands {
   transform: scale(1.05);
 }
 
-/*
- * --------------------------------
- * BOTÓN FLOTANTE (WHATSAPP)
- * --------------------------------
- */
-
+/* Botón flotante WhatsApp */
 .whatsapp-float {
   position: fixed;
   width: 60px;
   height: 60px;
   bottom: 40px;
   right: 40px;
-  background-color: #25d366; /* Color de WhatsApp */
+  background-color: #25d366;
   color: #fff;
   border-radius: 50px;
   text-align: center;
@@ -140,10 +99,11 @@ footer .fa-brands {
   transform: scale(1.1);
 }
 
+/* Globito de chat sobre el botón flotante */
 .chat-bubble {
   position: absolute;
   right: 70px;
-  bottom: 0px;
+  bottom: 0;
   background-color: white;
   padding: 12px;
   border-radius: 12px;
@@ -160,7 +120,7 @@ footer .fa-brands {
   flex-direction: column;
 }
 
-/* Estilo específico para el ícono de WhatsApp flotante */
+/* Icono específico del botón flotante */
 .whatsapp-float i {
   font-size: 30px !important;
   width: 30px;

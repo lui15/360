@@ -1,6 +1,6 @@
 /**
  * Función que devuelve el enlace basado en el tipo solicitado.
- * @param {string} type - 'whatsapp', 'email', 'audita', 'demo', 'ficha', 'talento', 'unete_club'...
+ * @param {string} type - 'whatsapp', 'email', 'audita', 'demo', 'ficha', 'talento', 'unete_club', 'impacto_form'...
  * @returns {string} URL correspondiente
  */
 function getLink(type) {
@@ -16,11 +16,16 @@ function getLink(type) {
     )}`,
     email: `mailto:${EMAIL_ADDRESS}?subject=Consulta%20sobre%20Soluciones%20de%20Sostenibilidad`,
 
-    // Sustituye estos por tus formularios reales:
+    // Formularios Google Forms o CTA específicas
     audita: "https://forms.gle/AUDITA_FORM_LINK",
     demo: "https://forms.gle/SOLICITAR_DEMO_FORM_LINK",
-    talento: "https://forms.gle/TALENTO_FORM_LINK",
     unete_club: "https://forms.gle/UNETE_CLUB_FORM_LINK",
+
+    // CAMBIOS SOLICITADOS: Nuevos enlaces de Google Forms
+    talento:
+      "https://docs.google.com/forms/d/e/1FAIpQLScMPyAPWuUVP45TiAK30kZLwXmB7JRWzP84j-l9YLlHWpegLg/viewform?usp=dialog",
+    impacto_form:
+      "https://docs.google.com/forms/d/e/1FAIpQLSeWib3s7-dB9pR-rFlQzIUvqQiHzfloxciDYgWpzcG_GU-q1g/viewform?usp=header",
 
     // PDF ficha técnica
     ficha: "Brochure.pdf",
@@ -35,17 +40,30 @@ document.addEventListener("DOMContentLoaded", () => {
   // Menú móvil
   const menuButton = document.getElementById("menu-button");
   const mobileMenu = document.getElementById("mobile-menu");
+  const menuIcon = menuButton ? menuButton.querySelector("i") : null;
 
-  if (menuButton && mobileMenu) {
+  if (menuButton && mobileMenu && menuIcon) {
     menuButton.addEventListener("click", () => {
       mobileMenu.classList.toggle("hidden");
+
+      // Lógica para cambiar el icono (fa-bars <-> fa-xmark)
+      if (mobileMenu.classList.contains("hidden")) {
+        menuIcon.classList.remove("fa-xmark");
+        menuIcon.classList.add("fa-bars");
+      } else {
+        menuIcon.classList.remove("fa-bars");
+        menuIcon.classList.add("fa-xmark");
+      }
     });
 
     // Cerrar menú móvil después de hacer clic en un enlace o botón
     mobileMenu.querySelectorAll("a, button").forEach((element) => {
       element.addEventListener("click", () => {
+        // Pequeño retraso para que la navegación sea visible antes de cerrar
         setTimeout(() => {
           mobileMenu.classList.add("hidden");
+          menuIcon.classList.remove("fa-xmark");
+          menuIcon.classList.add("fa-bars");
         }, 300);
       });
     });
