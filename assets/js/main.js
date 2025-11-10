@@ -16,19 +16,25 @@ function getLink(type) {
     )}`,
     email: `mailto:${EMAIL_ADDRESS}?subject=Consulta%20sobre%20Soluciones%20de%20Sostenibilidad`,
 
-    // Formularios Google Forms o CTA específicas
-    audita: "https://forms.gle/AUDITA_FORM_LINK",
-    demo: "https://forms.gle/SOLICITAR_DEMO_FORM_LINK",
-    unete_club: "https://forms.gle/UNETE_CLUB_FORM_LINK",
+    // ENLACES ACTUALIZADOS:
+    // Audita tu empresa gratis (HERO) y Súmate al Impacto (IMPACTO)
+    audita:
+      "https://docs.google.com/forms/d/e/1FAIpQLSeWib3s7-dB9pR-rFlQzIUvqQiHzfloxciDYgWpzcG_GU-q1g/viewform?usp=sharing&ouid=101029110610181042140",
+    impacto_form:
+      "https://docs.google.com/forms/d/e/1FAIpQLSeWib3s7-dB9pR-rFlQzIUvqQiHzfloxciDYgWpzcG_GU-q1g/viewform?usp=sharing&ouid=101029110610181042140",
 
-    // CAMBIOS SOLICITADOS: Nuevos enlaces de Google Forms
+    // Demo y Ficha Técnica del Dashboard (Ambos apuntan al Looker Studio)
+    demo: "https://lookerstudio.google.com/reporting/2d35ad3f-d02b-46af-acbd-91387bd3c82d",
+    ficha:
+      "https://lookerstudio.google.com/reporting/2d35ad3f-d02b-46af-acbd-91387bd3c82d",
+
+    // Postúlate o Envía tu Idea (TALENTO)
     talento:
       "https://docs.google.com/forms/d/e/1FAIpQLScMPyAPWuUVP45TiAK30kZLwXmB7JRWzP84j-l9YLlHWpegLg/viewform?usp=dialog",
-    impacto_form:
-      "https://docs.google.com/forms/d/e/1FAIpQLSeWib3s7-dB9pR-rFlQzIUvqQiHzfloxciDYgWpzcG_GU-q1g/viewform?usp=header",
 
-    // PDF ficha técnica
-    ficha: "Brochure.pdf",
+    // Enlace Club Verde 360 (ACTUALIZADO)
+    unete_club:
+      "https://docs.google.com/forms/d/e/1FAIpQLSeWib3s7-dB9pR-rFlQzIUvqQiHzfloxciDYgWpzcG_GU-q1g/viewform?usp=sharing&ouid=101029110610181042140",
 
     contacto: "#contacto",
   };
