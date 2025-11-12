@@ -24,9 +24,9 @@ function getLink(type) {
       "https://docs.google.com/forms/d/e/1FAIpQLSeWib3s7-dB9pR-rFlQzIUvqQiHzfloxciDYgWpzcG_GU-q1g/viewform?usp=sharing&ouid=101029110610181042140",
 
     // Demo y Ficha Técnica del Dashboard (Ambos apuntan al Looker Studio)
-    demo: "https://lookerstudio.google.com/reporting/2d35ad3f-d02b-46af-acbd-91387bd3c82d",
+    demo: "https://docs.google.com/forms/d/e/1FAIpQLSeWib3s7-dB9pR-rFlQzIUvqQiHzfloxciDYgWpzcG_GU-q1g/viewform?usp=sharing&ouid=101029110610181042140",
     ficha:
-      "https://lookerstudio.google.com/reporting/2d35ad3f-d02b-46af-acbd-91387bd3c82d",
+      "https://docs.google.com/forms/d/e/1FAIpQLSeWib3s7-dB9pR-rFlQzIUvqQiHzfloxciDYgWpzcG_GU-q1g/viewform?usp=sharing&ouid=101029110610181042140",
 
     // Postúlate o Envía tu Idea (TALENTO)
     talento:
